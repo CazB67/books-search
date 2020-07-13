@@ -1,14 +1,9 @@
 import React from "react";
 
-export function Card(props) {
+export function SavedCard(props) {
   return (
     <>  
-     <div className="card mt-5">
-     <div className="card-body">
-         Book Search
-         <input className="form-control form-control-lg mb-2" type="text" placeholder="book title" onChange={props.inputText} />
-         <button type="submit" className="btn btn-primary float-right" onClick={props.search}>Search</button></div>
-         </div>
+     
         <div className="card mt-5">
         <div className="card-body">
            {props.results} 
@@ -21,7 +16,7 @@ export function Card(props) {
   );
 }
 
-export function ListItem(props) {
+export function SavedListItem(props) {
     return (<>
                 
                 <li className="list-group-item"value={props.value}>
@@ -38,4 +33,3 @@ export function ListItem(props) {
 
 );
 }
-
