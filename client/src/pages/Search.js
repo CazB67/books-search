@@ -10,14 +10,13 @@ function Search() {
   const [books, setBooks] = useState([])
   const [bookTitle, setBookTitle] =useState("")
   
-
   function handleSearch(event) {
     event.preventDefault();
     API.getBook({
       bookTitle
     }).then(res => 
       setBooks(res.data.items)
-    )
+    ).then(() => setBookTitle(""))
     .catch(err => console.log(err));
 };
 
@@ -25,6 +24,8 @@ function handleInputChange(event) {
   const  {value}  = event.target;
   setBookTitle(value.trim())
 };
+
+
 
 function saveBook(event) {
   event.preventDefault()
@@ -45,9 +46,7 @@ function saveBook(event) {
       <Container>
         <Navbar/>
         <Jumbotron/>
-        
-        <Card search={handleSearch} inputText={handleInputChange} results="Results">
-          
+        <Card search={handleSearch} inputText={handleInputChange} enteredText={bookTitle} results="Results">
         {books.map((book, index) => (
             <ListItem 
             saveButton={saveBook}
@@ -63,9 +62,7 @@ function saveBook(event) {
         }
         </Card> 
       </Container>
-
     );
   }
-
 
 export default Search;

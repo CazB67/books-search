@@ -3,10 +3,10 @@ import React from "react";
 export function Card(props) {
   return (
     <>  
-     <div className="card mt-5">
+     <div className="card mt-3 mb-3">
      <div className="card-body">
          Book Search
-         <input className="form-control form-control-lg mb-2" type="text" placeholder="book title" onChange={props.inputText} />
+         <input className="form-control form-control-lg mb-2" value={props.enteredText} type="text" placeholder="book title" onChange={props.inputText} />
          <button type="submit" className="btn btn-primary float-right" onClick={props.search}>Search</button></div>
          </div>
         <div className="card mt-5">

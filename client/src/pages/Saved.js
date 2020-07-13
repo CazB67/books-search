@@ -13,18 +13,21 @@ function Saved() {
   useEffect(() => {
     getSavedBooks()
   }, [])
-  function test(res) {
-    debugger
-  }
+  
   function getSavedBooks() {
-
     API.getSavedBooks()
       .then(res => setBooks(res.data))
-      
-       
-        //console.log(res +"---------------------------"))
       .catch(err => console.log(err));
   };
+
+  function deleteBook(event) {
+    event.preventDefault()
+    console.log(event.target.getAttribute("value"))
+    API.deleteBook(event.target.getAttribute("value"))
+    .then(res =>
+      getSavedBooks()
+    )
+  }
 
     return (
       <Container>
@@ -33,7 +36,7 @@ function Saved() {
         <SavedCard  results="Saved Books">
          {books.map(book => (
             <SavedListItem 
-            //deleteButton={deleteBook}
+            deleteButton={deleteBook}
             key={book._id}
             value={book._id}
             title={book.title}

@@ -6,7 +6,6 @@ module.exports = {
     db.Book
       .find(req.query)
       .then(dbModel => res.json(dbModel))
-    //  .then(dbModel => console.log("------" +  dbModel.Books[0].Book.title))
       .catch(err => res.status(422).json(err));
   },
   create: function(req, res) {
@@ -16,5 +15,12 @@ module.exports = {
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
+  remove: function(req, res) {
+    db.Book
+      .findById({ _id: req.params.id })
+      .then(dbModel => dbModel.remove())
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+  }
   
 };
