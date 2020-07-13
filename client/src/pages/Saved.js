@@ -7,18 +7,16 @@ import {SavedCard, SavedListItem} from "../components/SavedCard";
 import { Container } from "../components/Grid";
 
 function Saved() {
- 
-
     return (
       <Container>
         <Navbar/>
         <Jumbotron/>
-        <SavedCard  results="Saved">
+        <SavedCard  results="Saved Books">
         
             <SavedListItem 
-            // saveButton={saveBook}
-            // key={index}
-            // value={index}
+            // deleteButton={deleteBook}
+            // key={_id}
+            // value={_id}
             // title={book.volumeInfo.title}
             // authors={book.volumeInfo.authors}
             // link={book.volumeInfo.infoLink}
