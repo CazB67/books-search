@@ -6,6 +6,7 @@ module.exports = {
     db.Book
       .find(req.query)
       .then(dbModel => res.json(dbModel))
+    //  .then(dbModel => console.log("------" +  dbModel.Books[0].Book.title))
       .catch(err => res.status(422).json(err));
   },
   create: function(req, res) {

@@ -24,7 +24,7 @@ export function Card(props) {
 export function ListItem(props) {
     return (<>
                 
-                <li className="list-group-item"value={props.value}>
+                <li className="list-group-item" value={props.value}>
                 <h2>{props.title}</h2>
                 <p>{props.authors}<button value={props.value} className="float-right" onClick={props.saveButton}>Save</button></p>
                 <a href={props.link}>{props.link}</a>
