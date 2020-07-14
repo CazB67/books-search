@@ -25,8 +25,6 @@ function handleInputChange(event) {
   setBookTitle(value.trim())
 };
 
-
-
 function saveBook(event) {
   event.preventDefault()
   console.log(event.target.getAttribute("value"));

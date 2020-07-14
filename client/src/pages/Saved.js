@@ -5,8 +5,6 @@ import {SavedCard, SavedListItem} from "../components/SavedCard";
 import { Container } from "../components/Grid";
 import API from "../utils/API";
 
-
-
 function Saved() {
   const [books, setBooks] = useState([])
 
@@ -28,7 +26,6 @@ function Saved() {
       getSavedBooks()
     )
   }
-
     return (
       <Container>
         <Navbar/>
@@ -51,6 +48,5 @@ function Saved() {
       </Container>
     );
   }
-
 
 export default Saved;
