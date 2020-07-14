@@ -4,7 +4,9 @@ a React-based Google Books Search app
 ## Description 
 ![Last Commit](https://img.shields.io/github/last-commit/cazb67/books-search) ![Top Language](https://img.shields.io/github/languages/top/cazb67/books-search)) ![GitHub repo size](https://img.shields.io/github/repo-size/cazb67/books-search)) 
 
-A React-based Google Books Search app using the MERN stack, Google books API and a Mongo database. It alllows the user to search for books and also save their details. This app  uses [Create React App](https://github.com/facebook/create-react-app) and a Bootstrap CSS Framework. It has basic functionality but needs better styling, smaller more reusable components and added functionality such as telling the user where to go on save. This will be looked at in the future and developed when not so time poor.
+A React-based Google Books Search app using the MERN stack, Google books API and a Mongo database. It alllows the user to search for books and also save their details. This app  uses [Create React App](https://github.com/facebook/create-react-app) and a Bootstrap CSS Framework. 
+
+It has basic functionality but needs better styling, smaller more reusable components and added functionality such as telling the user where to go on save. This will be looked at in the future and developed when not so time poor. I have two card components because of bad design. I need to redesign the components to have one card component which can be used twice.
 
 ## Table of Contents
 1. [Installation](#Installation)
