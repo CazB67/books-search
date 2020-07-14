@@ -1,9 +1,6 @@
 # Google Books Search
 a React-based Google Books Search app
 
-# React Portfolio
-Portfolio using React
-
 ## Description 
 ![Last Commit](https://img.shields.io/github/last-commit/cazb67/books-search) ![Top Language](https://img.shields.io/github/languages/top/cazb67/books-search)) ![GitHub repo size](https://img.shields.io/github/repo-size/cazb67/books-search)) 
 
