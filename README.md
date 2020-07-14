@@ -25,6 +25,10 @@ It has basic functionality but needs better styling, smaller more reusable compo
 
 * The URL of the GitHub repository is https://github.com/CazB67/books-search
 
+The following GIF shows the application's functionality and how to use. 
+
+<img src="./client/public/google-books.gif" width="541" height="423" title="Employee Directory App">
+
 ## Credits
 - Team at UWA Coding Bootcamp
 - Google books API
