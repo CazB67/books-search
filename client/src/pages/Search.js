@@ -36,7 +36,6 @@ function handleInputChange(event) {
 
 function saveBook(event) {
   event.preventDefault()
-  console.log(event.target.getAttribute("value"));
   let bookData = books[event.target.getAttribute("value")];
   API.saveBook(
     {
@@ -46,7 +45,7 @@ function saveBook(event) {
       image: bookData.volumeInfo.imageLinks.thumbnail,
       link: bookData.volumeInfo.infoLink
     }
-  )
+  ).then(() => alert("Book is saved"))
 };
     return (
       <Container>
