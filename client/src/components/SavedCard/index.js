@@ -22,7 +22,7 @@ export function SavedListItem(props) {
                   <h2>{props.title}</h2>
                   <p>{props.authors}</p>
                   <button value={props.value} className="float-right" onClick={props.deleteButton}>Delete</button>
-                  <a href={props.link} target="_blank">More Info</a>
+                  <a href={props.link} rel="noopener noreferrer" target="_blank">More Info</a>
                   <div className="row mt-3 mb-3">
                       <div className="col-md-2">
                         <img className="" alt="book" src={props.image}/>
