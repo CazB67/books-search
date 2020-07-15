@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Navbar from "../components/Navbar";
 import Jumbotron from "../components/Jumbotron";
+import Modal from "../components/ModalExample";
 import {Card, ListItem} from "../components/Card";
 import { Container } from "../components/Grid";
 import API from "../utils/API";
@@ -11,6 +12,9 @@ function Search() {
   const [books, setBooks] = useState([])
   const [bookTitle, setBookTitle] =useState("")
   const [visibility, setVisibility] =useState("")
+  const [modal, setModal] = useState(false);
+
+  const toggle = () => setModal(!modal);
 
   useEffect(() => {
     setVisibility("card mt-5 d-none");
@@ -45,12 +49,14 @@ function saveBook(event) {
       image: bookData.volumeInfo.imageLinks.thumbnail,
       link: bookData.volumeInfo.infoLink
     }
-  ).then(() => alert("Book is saved"))
+  ).then(() => setModal(true))
 };
     return (
       <Container>
-        <Navbar/>
+        <Navbar/> 
+        <Modal/>
         <Jumbotron/>
+        <Modal modal={modal} toggle={toggle}/>
         <Card search={handleSearch} inputText={handleInputChange} enteredText={bookTitle} results="Results" visibility={visibility}>
           {books.map((book, index) => (
             <ListItem 
