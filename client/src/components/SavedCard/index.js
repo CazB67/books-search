@@ -24,10 +24,10 @@ export function SavedListItem(props) {
                   <button value={props.value} className="float-right" onClick={props.deleteButton}>Delete</button>
                   <a href={props.link} rel="noopener noreferrer" target="_blank">More Info</a>
                   <div className="row mt-3 mb-3">
-                      <div className="col-md-2">
+                      <div className="col-md-3">
                         <img className="" alt="book" src={props.image}/>
                       </div>
-                      <div className="col-md-10">
+                      <div className="col-md-9">
                         <p className="float-right">{props.description}</p>
                       </div>
                   </div>

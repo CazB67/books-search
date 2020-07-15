@@ -29,10 +29,10 @@ export function ListItem(props) {
                 <p>{props.authors}<button value={props.value} className="float-right" onClick={props.saveButton}>Save</button></p>
                 <a href={props.link} rel="noopener noreferrer" target="_blank">{props.link}</a>
                 <div className="row mt-3 mb-3">
-                    <div className="col-md-2">
+                    <div className="col-md-3">
                 <img className="" alt="book" src={props.image}/>
                 </div>
-                <div className="col-md-10">
+                <div className="col-md-9">
                 <p className="float-right">{props.description}</p></div></div></li>
                 </>
 
