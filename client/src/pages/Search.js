@@ -39,7 +39,7 @@ function saveBook(event) {
   API.saveBook(
     {
       title: bookData.volumeInfo.title,
-      authors: bookData.volumeInfo.authors,
+      authors: bookData.volumeInfo.authors.join( ", "),
       description: bookData.volumeInfo.description,
       image: bookData.volumeInfo.imageLinks.thumbnail,
       link: bookData.volumeInfo.infoLink
