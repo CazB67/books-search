@@ -53,16 +53,16 @@ function saveBook(event) {
         <Navbar/>
         <Jumbotron/>
         <Card search={handleSearch} inputText={handleInputChange} enteredText={bookTitle} results="Results" visibility={visibility}>
-        {books.map((book, index) => (
+          {books.map((book, index) => (
             <ListItem 
-            saveButton={saveBook}
-            key={index}
-            value={index}
-            title={book.volumeInfo.title}
-            link={book.volumeInfo.infoLink}
-            image={typeof book.volumeInfo.imageLinks !== "undefined" ? book.volumeInfo.imageLinks.thumbnail : bookImage}
-            description={book.volumeInfo.description}
-            authors={typeof book.volumeInfo.authors !== "undefined" ? book.volumeInfo.authors.join(", ") : ""}
+              saveButton={saveBook}
+              key={index}
+              value={index}
+              title={book.volumeInfo.title}
+              link={book.volumeInfo.infoLink}
+              image={typeof book.volumeInfo.imageLinks !== "undefined" ? book.volumeInfo.imageLinks.thumbnail : bookImage}
+              description={book.volumeInfo.description}
+              authors={typeof book.volumeInfo.authors !== "undefined" ? book.volumeInfo.authors.join(", ") : ""}
             />
         )) 
         }
