@@ -20,7 +20,6 @@ function Saved() {
 
   function deleteBook(event) {
     event.preventDefault()
-    console.log(event.target.getAttribute("value"))
     API.deleteBook(event.target.getAttribute("value"))
     .then(res =>
       getSavedBooks()

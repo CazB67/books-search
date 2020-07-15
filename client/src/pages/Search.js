@@ -48,13 +48,12 @@ function saveBook(event) {
     }
   )
 };
-  console.log(books);
     return (
       <Container>
         <Navbar/>
         <Jumbotron/>
         <Card search={handleSearch} inputText={handleInputChange} enteredText={bookTitle} results="Results" visibility={visibility}>
-        {books && books.map((book, index) => (
+        {books.map((book, index) => (
             <ListItem 
             saveButton={saveBook}
             key={index}
