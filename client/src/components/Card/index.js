@@ -27,7 +27,7 @@ export function ListItem(props) {
                 <li className="list-group-item" value={props.value}>
                 <h2>{props.title}</h2>
                 {props.children}
-                <p>{props.authors}<button value={props.value} className="float-right" onClick={props.saveButton} toggle={props.toggle}>Save</button></p>
+                <p>{props.authors}<button value={props.value} className={props.removebutton} onClick={props.saveButton} toggle={props.toggle}>Save</button></p>
                 <a href={props.link} rel="noopener noreferrer" target="_blank">{props.link}</a>
                 <div className="row mt-3 mb-3">
                     <div className="col-md-3">
